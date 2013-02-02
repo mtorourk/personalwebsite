@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block homepage_selected %}selected{% endblock homepage_selected %}
+{% block portfolio_selected %}unselected{% endblock portfolio_selected %}
+{% block about_selected %}unselected{% endblock about_selected %}
+{% block contact_selected %}unselected{% endblock contact_selected %}
+
+
+{% block body %}{{ block.super }}
+<div>
+	<span class="title">Hello.</span>
+	<div class="info-text">
+		<div>My name is <a href="{% url about %}">Matthew O'Rourke.</a></div>
+		<div>I am an undergraduate student at UC San Diego.</div>
+		<div>My interests include Technology, Humans, and Language.</div>
+	</div>
+</div>
+<div id="circles-container">
+	<a href="{% url kalite %}"><li class="homepage-circles left-circle"></li></a>
+	<a href="{% url ucsd %}"><li class="homepage-circles center-circle"></li></a>
+	<a href="{% url eslgenie %}"><li class="homepage-circles right-circle"></li></a>
+</div>
+
+{% endblock %}

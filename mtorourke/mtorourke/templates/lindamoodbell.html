@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block homepage_selected %}unselected{% endblock homepage_selected %}
+{% block portfolio_selected %}selected{% endblock portfolio_selected %}
+{% block about_selected %}unselected{% endblock about_selected %}
+{% block contact_selected %}unselected{% endblock contact_selected %}
+
+{% block body %}{{ block.super }}
+
+<span class="title">Work.</span>
+<div class="portfolio-nav">
+	<a href="{% url portfolio %}" class="{% block portfolio_main_selected %}unselected{% endblock portfolio_main_selected %}" href="{% url portfolio %}">Main</a>
+	<a href="{% url kalite %}" class="{% block portfolio_kalite_selected %}unselected{% endblock portfolio_kalite_selected %}">KA Lite</a>
+	<a href="{% url ucsd %}" class="{% block portfolio_ucsd_selected %}unselected{% endblock portfolio_ucsd_selected %}">UCSD</a>
+	<a href="{% url eslgenie %}" class="{% block portfolio_esl_selected %}unselected{% endblock portfolio_esl_selected %}">ESL Genie</a>
+	<a href="{% url lindamoodbell %}" class="selected">Lindamood-Bell</a>
+</div>
+
+<div class="info-text">
+
+	<div>Lindamood-Bell Learning Processes administers research-grounded language instruction through learning centers internationally. They have provided individualized instruction to their students for over 25 years. The professionals at Lindamood-Bell work hard to ensure that every student is on track to reach their desired learning outcomes.</div>
+
+</div>
+
+{% endblock body %}

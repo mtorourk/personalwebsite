@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block homepage_selected %}unselected{% endblock homepage_selected %}
+{% block portfolio_selected %}unselected{% endblock portfolio_selected %}
+{% block about_selected %}unselected{% endblock about_selected %}
+{% block contact_selected %}selected{% endblock contact_selected %}
+
+{% block body %}{{ block.super }}
+
+<span class="title">Talk.</span>
+<div class="info-text" style="margin-top: 30px;">
+	<div>Email: <a href="mailto:morourke2289@gmail.com">morourke2289@gmail.com</a></div>
+	<div>Facebook: <a href="https://www.facebook.com/matthew.orourke.397">www.facebook.com/matthew.orourke.397</a></div>
+	<div>Twitter: <a href="https://twitter.com/mtorourk">www.twitter.com/mtorourk</a></div>
+	<div>LinkedIn: <a href="http://www.linkedin.com/profile/view?id=225156534&trk=tab_pro">www.linkedin.com/profile</a></div>
+</div>
+
+{% endblock body %}

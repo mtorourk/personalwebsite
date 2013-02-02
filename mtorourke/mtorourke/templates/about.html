@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block homepage_selected %}unselected{% endblock homepage_selected %}
+{% block portfolio_selected %}unselected{% endblock portfolio_selected %}
+{% block about_selected %}selected{% endblock about_selected %}
+{% block contact_selected %}unselected{% endblock contact_selected %}
+
+{% block body %}{{ block.super }}
+
+<span class="title">Me.</span>
+<div class="info-text">
+	<div>I am currently an Undergraduate senior at the University of California, San Diego. My field of study is Linguistics with a specialization in Cognition and Language. I am also a developer and user experience designer at KA Lite, which is an open source web application whose core group of developers is centered at UC San Diego.</div>
+	</br>
+	<div>My main interests include developing products that affect people's lives, web development and analytics, and numerous aspects of language and cognition including comprehension, thinking, evolution, and representation in the brain.</div>
+	</br>
+	<div>If my interests and experience sound interesting to you, I urge you to <a href="{% url contact %}">contact me.</a></div>
+</div>
+
+{% endblock body %}

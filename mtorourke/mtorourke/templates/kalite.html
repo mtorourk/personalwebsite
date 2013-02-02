@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block homepage_selected %}unselected{% endblock homepage_selected %}
+{% block portfolio_selected %}selected{% endblock portfolio_selected %}
+{% block about_selected %}unselected{% endblock about_selected %}
+{% block contact_selected %}unselected{% endblock contact_selected %}
+
+{% block body %}{{ block.super }}
+
+<span class="title">Work.</span>
+<div class="portfolio-nav">
+	<a href="{% url portfolio %}" class="{% block portfolio_main_selected %}unselected{% endblock portfolio_main_selected %}" href="{% url portfolio %}">Main</a>
+	<a href="{% url kalite %}" class="{% block portfolio_kalite_selected %}selected{% endblock portfolio_kalite_selected %}">KA Lite</a>
+	<a href="{% url ucsd %}" class="{% block portfolio_ucsd_selected %}unselected{% endblock portfolio_ucsd_selected %}">UCSD</a>
+	<a href="{% url eslgenie %}" class="{% block portfolio_esl_selected %}unselected{% endblock portfolio_esl_selected %}">ESL Genie</a>
+	<a href="{% url lindamoodbell %}" class="unselected">Lindamood-Bell</a>
+</div>
+<div class="info-text" style="margin-top: 30px">
+	<div>KA Lite is an offline version of the Khan Academy content. It is intended to be used by anyone for whom a constant internet connection is difficult. The software need only be downloaded once, and can then be used in the absense of an internet connection. The goal of this project is to spread educational content to those who do not have access to a reliable internet connection, which is a startlingly large percentage of the world.</div>
+	</br>
+	<div>The separation between those with internet access and those without mirrors the economic divide between the western world and the developing world. Those with fewer resources in general are likely to be without an internet connection. KA Lite seeks to address unequal access to educational content, by making such content more widely available in places where the internet is either scarce or absent.</div>
+</div>
+{% endblock body %}

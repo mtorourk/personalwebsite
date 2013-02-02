@@ -1,0 +1,217 @@
+<DOCTYPE html>
+	<head>
+		<style>
+
+		body {
+			background: url("{{ STATIC_URL }}images/small-weave.jpg") ;
+		}
+
+		a {
+			color: #91DAFF;
+			text-decoration: none;
+		}
+
+		a:hover {
+			font-style: italic;
+		}
+
+		.sitewide-nav {
+			font: helvetica;
+			font-size: 20px;
+			margin-left: 5px;
+			margin-top: 5px;
+		}
+		.selected {
+			font-style: italic;
+			color: #91DAFF;
+			font-weight: bold;
+			margin-right: 7px; 
+			text-decoration: none;
+		}
+		.unselected {
+			color: white;
+			margin-right: 7px;
+			text-decoration: none;
+
+		}
+
+		.unselected:hover {
+			font-style: italic;
+		}
+
+		.selected:hover {
+			font-style: normal;
+		}
+
+		.title {
+			font: helvetica;
+			margin-left: 20px;
+			color: #91DAFF;
+			font-size: 55px;
+		}
+
+		.homepage-circles {
+			margin-top: 5px;
+		}
+
+		.left-circle {
+			background: url("{{ STATIC_URL }}images/kalite-grey-circle.png") no-repeat;
+			width: 360px;
+			height: 360px;
+			display: inline-block;
+			margin-right: -45px;
+		}
+
+		.left-circle:hover {
+			background: url("{{ STATIC_URL }}images/kalite-circle.png");
+		}
+
+		.right-circle {
+			background: url("{{ STATIC_URL }}images/esl-genie-grey-logo.png");
+			display: inline-block;
+			width: 360px;
+			height: 360px;
+		}
+
+		.right-circle:hover {
+			background: url("{{ STATIC_URL }}images/esl-genie-logo.png");
+		}
+
+		.info-text {
+			color: white;
+			margin-left: 20px;
+			font-size: 20px;
+			font: helvetica;
+			width: 475px;
+			margin-top: 30px;
+		}
+
+		.center-circle {
+			background: url("{{ STATIC_URL }}images/ucsd-grey-seal.png");
+			width: 360px;
+			height: 360px;
+			display: inline-block;
+			margin-right: -45px;
+		}
+
+		.center-circle:hover {
+			background: url("{{ STATIC_URL }}images/ucsd-seal.png");
+		}
+
+		#circles-container {
+			text-align: center		
+		}
+
+		#top-img {
+			width: 102%;
+			max-height: 75px;
+			margin-top: -10px;
+			margin-left: -10px;
+			
+		}
+
+		#footer-content {
+			color: white;
+			float: right;
+			width: 100%;
+		}
+
+		.portfolio-nav {
+			margin-left: 20px;
+			font-size: 20px;
+			margin-top: 30px;
+		}
+
+		.portfolio-pieces {
+			padding-top: 20px;
+		}
+
+		.portfolio-pieces:hover {
+
+		}
+
+		.portfolio-pieces-container {
+			margin-top: 5%;
+		}
+
+		.portfolio-text {
+			color: black;
+		}
+
+		.portfolio-pieces-kalite {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-grey-kalite.png") no-repeat;
+			min-height: 115px;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.portfolio-pieces-ucsd {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-grey-ucsd.png") no-repeat;
+			min-height: 115px;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.portfolio-pieces-esl {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-grey-esl.png") no-repeat;
+			min-height: 115px;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.portfolio-pieces-lindamood {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-grey-lindamood.png") no-repeat;
+			min-height: 115px;
+			width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}		
+
+		.portfolio-pieces-ucsd:hover {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-ucsd.png") no-repeat;
+		}
+
+		.portfolio-pieces-kalite:hover {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-kalite.png") no-repeat;
+		}
+
+		.portfolio-pieces-esl:hover {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-esl.png") no-repeat;
+		}
+
+		.portfolio-pieces-lindamood:hover {
+			background: url("{{ STATIC_URL }}images/portfolio-pieces-lindamood.png") no-repeat;
+		}
+
+		</style>
+</head>
+<body>
+	{% block body %}
+	<div>
+		{% block sitewide_navigation %}
+		<img id="top-img" src="{{ STATIC_URL }}images/ocean-pan.jpg"/>
+			<div class="sitewide-nav">
+				<a href="{% url homepage %}"class="{% block homepage_selected %}{% endblock homepage_selected %}">home</a>
+				<a href="{% url portfolio %}" class="{% block portfolio_selected %}{% endblock portfolio_selected %}">portfolio</a>
+				<a href="{% url about %}" class="{% block about_selected %}{% endblock about_selected %}">about</a>
+				<a href="{% url contact %}" class="{% block contact_selected %}{% endblock contact_selected %}">contact</a>
+			</div>
+		{% endblock sitewide_navigation %}
+		<hr>
+	</div>
+	{% endblock body %}
+<!-- <div id="footer-content"> -->
+	<!-- </br></br></br> -->
+	<!-- <hr> -->
+	<!-- <div>All Rights Reserved</div> -->
+<!-- </div> -->
+
+
+</body>
+
+
+
+</html>
